@@ -3,16 +3,24 @@ import "./App.css";
 
 export function Component() {
   return (
-    <div style={{ display: "flex" }}>
-      <div style={{ height: "100%", width: "10rem" }}>
+    <div style={{ display: "flex", gap: "1rem" }}>
+      <div
+        style={{
+          display: "flex",
+          height: "100%",
+          flexDirection: "column",
+        }}
+      >
         <ul>
           <Link to="/">Home</Link>
         </ul>
         <ul>
-          <Link to="/remote">Remote 1</Link>
+          <Link to="/remote">Remote App</Link>
         </ul>
       </div>
-      <Outlet />
+      <div style={{ display: "flex", flexDirection: "column" }}>
+        <Outlet />
+      </div>
     </div>
   );
 }

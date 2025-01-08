@@ -1,0 +1,12 @@
+{
+  "name": "rr7-mf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "pnpm --filter \"rr7-*\" run dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -10,12 +10,11 @@ const router = createBrowserRouter(
     {
       ...rootRoute,
       id: "root",
-      path: "/",
+      children: [{ path: "/", element: <h1>Home</h1> }],
     },
   ],
   {
     async patchRoutesOnNavigation({ path, patch }) {
-      console.log("PATCHING REMOTE ROUTES");
       if (path.startsWith("/remote")) {
         const { routes } = await import("remote/routes");
         patch("root", routes);

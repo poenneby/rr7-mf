@@ -18,8 +18,6 @@ export default defineConfig({
           type: "module",
           name: "remote",
           entry: "http://localhost:3001/remoteEntry.js",
-          entryGlobalName: "remote",
-          shareScope: "default",
         },
       },
       shared: {
@@ -39,6 +37,6 @@ export default defineConfig({
     }),
   ],
   build: {
-    target: "chrome130",
+    target: "chrome89",
   },
 });

@@ -34,6 +34,6 @@ export default defineConfig({
     }),
   ],
   build: {
-    target: "chrome130",
+    target: "chrome89",
   },
 });
