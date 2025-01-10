@@ -19,6 +19,10 @@ const router = createBrowserRouter(
         const { routes } = await import("remote/routes");
         patch("root", routes);
       }
+      if (path.startsWith("/remote2")) {
+        const { routes } = await import("remote2/routes");
+        patch("root", routes);
+      }
       // TODO: Add more remotes here
     },
   }

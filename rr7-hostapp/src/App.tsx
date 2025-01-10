@@ -17,6 +17,9 @@ export function Component() {
         <ul>
           <Link to="/remote">Remote App</Link>
         </ul>
+        <ul>
+          <Link to="/remote2">Remote App 2</Link>
+        </ul>
       </div>
       <div style={{ display: "flex", flexDirection: "column" }}>
         <Outlet />

@@ -6,24 +6,16 @@ import { dependencies } from "./package.json";
 // https://vite.dev/config/
 export default defineConfig({
   server: {
-    port: 3000,
+    port: 3002,
   },
   plugins: [
     react(),
     federation({
-      name: "host",
+      name: "remote2",
+      filename: "remoteEntry.js",
       manifest: true,
-      remotes: {
-        remote: {
-          type: "module",
-          name: "remote",
-          entry: "http://localhost:3001/remoteEntry.js",
-        },
-        remote2: {
-          type: "module",
-          name: "remote2",
-          entry: "http://localhost:3002/remoteEntry.js",
-        },
+      exposes: {
+        "./routes": "./src/routes.tsx",
       },
       shared: {
         react: {
